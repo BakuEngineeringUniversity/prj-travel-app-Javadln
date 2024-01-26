@@ -1,10 +1,12 @@
 package com.nicat.travelapp;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -66,6 +68,14 @@ public class MainActivity extends AppCompatActivity {
 
         ImageView recentIcon = findViewById(R.id.Recent);
         recentIcon.setOnClickListener(v -> openRecentRowItemActivity());
+//        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) ImageView imageView2 = findViewById(R.id.imageView2);
+//        imageView2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
 
@@ -123,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
             db.execSQL("DROP TABLE IF EXISTS my_table");
             onCreate(db);
         }
-        
+
     }
 
 

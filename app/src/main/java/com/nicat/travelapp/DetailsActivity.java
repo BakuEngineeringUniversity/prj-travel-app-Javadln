@@ -1,11 +1,12 @@
 package com.nicat.travelapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.media.Image;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -14,12 +15,21 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
         ImageView backButton = findViewById(R.id.imageView4);
-        backButton.setOnClickListener(new View.OnClickListener() {
+        backButton.setOnClickListener(this::onClick);
+
+        Button startBookingButton = findViewById(R.id.button);
+        startBookingButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                onBackPressed();
+            public void onClick(View v) {
+                // "Start Booking Your Trip" butonuna tıklandığında
+                // Sipariş yapma menüsünü açmak için gerekli intenti başlat
+                Intent intent = new Intent(DetailsActivity.this, OrderActivity.class);
+                startActivity(intent);
             }
         });
     }
 
+    private void onClick(View view) {
+        onBackPressed();
+    }
 }
