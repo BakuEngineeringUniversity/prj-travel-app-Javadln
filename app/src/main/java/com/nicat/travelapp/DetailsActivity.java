@@ -18,14 +18,11 @@ public class DetailsActivity extends AppCompatActivity {
         backButton.setOnClickListener(this::onClick);
 
         Button startBookingButton = findViewById(R.id.button);
-        startBookingButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // "Start Booking Your Trip" butonuna tıklandığında
-                // Sipariş yapma menüsünü açmak için gerekli intenti başlat
-                Intent intent = new Intent(DetailsActivity.this, OrderActivity.class);
-                startActivity(intent);
-            }
+        startBookingButton.setOnClickListener(v -> {
+            // "Start Booking Your Trip" butonuna tıklandığında
+            // Sipariş yapma menüsünü açmak için gerekli intenti başlat
+            Intent intent = new Intent(DetailsActivity.this, OrderActivity.class);
+            startActivity(intent);
         });
     }
 
