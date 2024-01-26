@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        
+
 
         List<RecentsData> recentsDataList = new ArrayList<>();
         recentsDataList.add(new RecentsData("Goygol Lake","Ganja","From $200",R.drawable.recentimage1));
@@ -130,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+
 
 
 
