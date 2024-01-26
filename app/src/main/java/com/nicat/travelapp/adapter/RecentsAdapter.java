@@ -11,8 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.nicat.travelapp.DetailsActivity;
 import com.nicat.travelapp.R;
+import com.nicat.travelapp.activity.DetailsActivity;
 import com.nicat.travelapp.model.RecentsData;
 
 import java.util.List;
@@ -45,12 +45,9 @@ public class RecentsAdapter extends RecyclerView.Adapter<RecentsAdapter.RecentsV
         holder.price.setText(recentsDataList.get(position).getPrice());
         holder.placeImage.setImageResource(recentsDataList.get(position).getImageUrl());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(context, DetailsActivity.class);
-                context.startActivity(i);
-            }
+        holder.itemView.setOnClickListener(view -> {
+            Intent i=new Intent(context, DetailsActivity.class);
+            context.startActivity(i);
         });
 
     }
