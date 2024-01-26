@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     RecentsAdapter recentsAdapter;
     TopPlacesAdapter topPlacesAdapter;
 
-//    @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
