@@ -1,5 +1,6 @@
 package com.nicat.travelapp;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Now here we will add some dummy data in our model class
+        
 
         List<RecentsData> recentsDataList = new ArrayList<>();
         recentsDataList.add(new RecentsData("Goygol Lake","Ganja","From $200",R.drawable.recentimage1));
@@ -64,7 +65,14 @@ public class MainActivity extends AppCompatActivity {
         ImageView recentIcon = findViewById(R.id.Recent);
         recentIcon.setOnClickListener(v -> openRecentRowItemActivity());
 
+        @SuppressLint({"WrongViewCast", "MissingInflatedId", "LocalSuppress"}) ImageView LoginButton = findViewById(R.id.LoginButton);
+        LoginButton.setOnClickListener(v -> openLoginActivity());
 
+
+    }
+    
+
+    private void openLoginActivity() {
     }
 
     private void openRecentRowItemActivity() {
@@ -100,26 +108,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    // Hi all, today we are going to make a holiday tour app.
-    // so lets see i will show you what we are going to build
-    // so lets get started.
-    // before getting started make sure to subscribe and hit the bell i con to get notified
-    // everytime i post a video.
-    // lets first import image assets
-    // Now we will add a recycler view for recents data.
-    // lets make a model class first.
-    // now we create a adapter class for holding data
-    // our adapter class is ready now we will setup recyclerview
 
-    // So we have setup recents items recyclerview
-    //Now we do same setup for top places
-    // lets do it fast.
-    // Now i will add a bottom navigation
-    // now we will set the details activity
-    // when user click on any of places details activity will open
-    // So this app is done.
-    // Please like share and subscribe
-    // if any question plz do comment
-    // Thanks for watching see you in the next tutorial
+
+
+
+
+
+    public static class SignUpActivity extends AppCompatActivity {
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_signup);
+
+
+
+
+
+
+
+
+        }
+    }
+
+
+
 
 }

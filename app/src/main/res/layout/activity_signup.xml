@@ -15,9 +15,9 @@
         android:layout_marginTop="140dp"
         android:backgroundTint="#6677cc"
         android:fontFamily="@font/rubik_medium"
-        android:text="Login"
+        android:text="@string/login"
         android:textColor="#ffffff"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,14 +34,16 @@
         android:hint="Username"
         android:inputType="text"
         android:padding="10dp"
-        android:textColor="#2929cc"
-        android:textColorHint="#6677cc"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
         app:layout_constraintCircleRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        tools:circularflow_radiusInDP="20" />
+        tools:circularflow_radiusInDP="20"
+        tools:ignore="HardcodedText"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/signupTextFullname"
@@ -51,7 +53,7 @@
         android:background="@drawable/background1"
         android:ems="10"
         android:fontFamily="@font/rubik_medium"
-        android:hint="Fullname"
+        android:hint="@string/fullname"
         android:inputType="text"
         android:padding="10dp"
         android:textColor="#2929cc"
@@ -61,7 +63,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signupTextPassword"
-        tools:circularflow_radiusInDP="20" />
+        tools:circularflow_radiusInDP="20"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/signupTextPassword"
@@ -74,13 +77,15 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:padding="10dp"
-        android:textColor="#2929cc"
+        android:textColor="#ffffff"
         android:textColorHint="#6677cc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signupTextUsername"
-        tools:circularflow_radiusInDP="20" />
+        tools:circularflow_radiusInDP="20"
+        tools:ignore="HardcodedText"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/signupButton"
@@ -89,9 +94,9 @@
         android:layout_marginTop="64dp"
         android:backgroundTint="#6677cc"
         android:fontFamily="@font/rubik_medium"
-        android:text="Sign up"
+        android:text="@string/sign_up"
         android:textColor="#ffffff"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,6 +112,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:importantForAccessibility="no" />
 <!--        app:srcCompat="@drawable/" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
